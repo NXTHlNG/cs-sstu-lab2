@@ -1,0 +1,12 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "SignInPage";
+}
+
+<div class="text-center">
+    <p>
+        <b>Username:</b> @HttpContextAccessor.HttpContext.Session.GetString("Username")
+        <b>Password:</b> @HttpContextAccessor.HttpContext.Session.GetString("Password")
+    </p>
+</div>

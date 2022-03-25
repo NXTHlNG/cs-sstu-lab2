@@ -14,7 +14,11 @@ namespace Lab2.Controllers
         [HttpPost]
         public IActionResult Index(InputViewModel model)
         {
-            return View(model);
+            if (ModelState.IsValid)
+            {
+                return View(model);
+            }
+            return View();
         }
     }
 }

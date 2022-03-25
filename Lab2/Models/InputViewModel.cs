@@ -10,6 +10,7 @@ namespace Lab2.Models
 
         [Required]
         [DataType(DataType.Password)]
+        [MinLength(9, ErrorMessage = "Password length must be more than 8 characters")]
         public string Password { get; set; }
 
         [Required]
